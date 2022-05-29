@@ -1,4 +1,15 @@
-# Heartbleed Vulnerable Server
+# Heartbleed
+### Setup
+Debian + Apache2 + OpenSSL (V. 1.0.1) based on https://github.com/effesociety/heartbleed-vulnerable-server <br>
+exploit based on: https://github.com/jknudsen-synopsys/heartbleed-box
+
+Requirements:
+- Docker
+- git
+- python
+
+#
+### Heartbleed Vulnerable Server
 A Debian (Wheezy) Linux system with a vulnerable version of libssl and openssl and a web server to showcase CVS-2014-0160, a.k.a. Heartbleed.
 
 # Overview
@@ -6,10 +17,10 @@ This docker container is based on Debian Jessie and has been modified to use a v
 
 ![Vulnerable Web Page](./docs/vulnerable-web-server.jpg)
 
-A simple static web page is served via Apache 2. In order to provide some **juicy** data when exploiting the vulnerability we added a simple form that creates a **cookie** where are stored user credentials.
-(We know that this is not a real case scenario but it is useful tu understand how informations are stored in the webserver)
+Log in to save the input to the server and then have it output by the exploit 
 
-# Usage
+#
+### Installation
 Install the container with `docker pull effesociety/heartbleed-vulnerable-server`
 
 Run the container with a port mapping `docker run -d -p 8443:443 effesociety/heartbleed-vulnerable-server`
@@ -27,6 +38,3 @@ root@kali:~/heartbleed-vulnerable-server# nmap -sV -p 8443 --script=ssl-heartble
 ``` sh
 msfconsole
 root@kali:/tmp# msfcli auxiliary/scanner/ssl/openssl_heartbleed RHOSTS=your-ip RPORT=8443 VERBOSE=true E
-```
-Here is an example of leaked info:
-![Heartbleed Leaked Info](./docs/heartbleed-info-leaked.jpg)
