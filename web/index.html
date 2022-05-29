@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Heartbleed exploit</title>
   <meta charset="UTF-8">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,15 +16,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<body>
-  <div class="container">
-	<div class="row">
-	  <div class="col s12 center-align info">
-	    <p>This is a vulnerable web server for showcasing CVE 2014-0160, a.k.a. Heartbleed.</p>
-		<p>In order to provide some <b>juicy</b> data when exploiting the vulnerability we added a simple form that creates a <b>cookie</b> where are stored user credentials<br/>
-		(We know that this is not a real case scenario but it is useful tu understand how informations are stored in the webserver)
-		</p>
-	  </div>
+<body leftmargin=30 topmargin=50>
+    <nav class="nav-blue navbar navbar-expand-sm navbar-dark">
+    </nav>
+
+    <div class="nav-blue navbar navbar-expand-sm navbar-dark">
+	    <h1>Heartbleed</h1>
+		<p>Um beim Ausnutzen der Schwachstelle einige Daten bereitzustellen, wurde ein einfaches Formular implementiert, das ein Cookie erzeugt, in dem die Anmeldedaten des Benutzers gespeichert werden
+			(Natürlich ist dies kein reales Szenario, aber es ist nützlich, um zu verstehen, wie Informationen auf dem Webserver gespeichert werden)</p>
+		<li>Alle Daten und eine Anleitung liegen in diesem GitHub-Repo ab: <a href="https://github.com/juuugee/docker-shellshock-cgi.git">github.com/juuugee/docker-shellshock-cgi.git</a></li>
+		<li>Das oben referenzierte Repository basiert auf diesem Repository: <a href="https://github.com/tex2e/docker-shellshock-cgi">github.com/tex2e/docker-shellshock-cgi</a></li>
+
 	</div>
   
     <div class="card">
