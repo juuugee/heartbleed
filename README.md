@@ -52,7 +52,7 @@ docker build -t seccode/heartbleed .
 ```
 4. run docker container: 
 ``` bash
-docker run -itd -p 8443:443 --name secode_heartbleed seccode/shellshock 
+docker run -itd -p 8443:443 --name secode_heartbleed seccode/heartbleed
 ``` 
 To make sure that the docker container is running, enter the following url in a browser (important https): 
 ``` bash
