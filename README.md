@@ -39,37 +39,38 @@ This docker container is based on Debian Jessie and has been modified to use a v
 
 1. clone this git repository 
 ```bash 
-$ git clone https://github.com/juuugee/heartbleed.git
+git clone https://github.com/juuugee/heartbleed.git
  ```
 2. navigate inside the cloned directory
 ```bash 
-$ cd heartbleed/
+cd heartbleed/
  ```
 
 3. build docker container: 
 ``` bash
-$ docker build -t seccode/heartbleed .
+docker build -t seccode/heartbleed .
 ```
 4. run docker container: 
 ``` bash
-$ docker run -itd -p 8443:443 --name secode_heartbleed seccode/shellshock 
+docker run -itd -p 8443:443 --name secode_heartbleed seccode/shellshock 
 ``` 
 To make sure that the docker container is running, enter the following url in a browser (important https): 
-
-    https://localhost:8443
+``` bash
+https://localhost:8443
+```
 
 
 #
 ## Exploitation
 
 1. Open 
-```
+``` bash
 https://localhost:8443
 ```
 2. Log in with fictional credentials
 
 3. Start the exploit:
 send a Heartbleed request to the vulnerable web server
-```
+``` bash
  python -m exploit.py
 ```
