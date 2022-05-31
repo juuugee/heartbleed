@@ -3,7 +3,7 @@
 Debian + Apache2 + OpenSSL (V. 1.0.1) based on https://github.com/effesociety/heartbleed-vulnerable-server <br>
 exploit based on: https://github.com/jknudsen-synopsys/heartbleed-box
 
-Requirements:
+Prerequisites:
 - Docker
 - git
 - python
